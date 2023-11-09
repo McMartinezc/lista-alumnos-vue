@@ -12,8 +12,8 @@
 <body>
     <main class="container" id="app">
 
-        <article v-for="s in students">
-            <p>Hola yo soy Galis</p>
+        <article v-for="student in students">
+            <p :style="{background:studentLength(student)}">Hola yo soy {{student}}</p>
         </article>
 
     </main>

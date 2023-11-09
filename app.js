@@ -4,8 +4,9 @@ import {
   computed,
 } from "https://unpkg.com/vue@3/dist/vue.esm-browser.js";
 
-const students = createApp({
+createApp({
   setup() {
+
     const students = ref([
       "Albertina",
       "Katerina",
@@ -13,15 +14,20 @@ const students = createApp({
       "Galis",
       "Oriol",
       "Susana",
-      "McCarmen",
+      "MCarmen",
       "Gerard",
       "Dayane",
       "Diego",
       "Maria",
     ]);
 
+    const studentLength = (student)=>{
+      return student.length >= 7 ? "grey" : "";
+    };
+
+  
     return {
-      students,
+      students, studentLength
     };
   },
 }).mount("#app");
